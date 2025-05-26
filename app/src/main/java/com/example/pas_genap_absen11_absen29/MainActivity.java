@@ -54,7 +54,9 @@ public class MainActivity extends AppCompatActivity {
             Fragment fragment = null;
             int id = item.getItemId();
 
-            if (id == R.id.nav_match) {
+            if (id == R.id.nav_team) {
+                fragment = new TeamFragment();
+            }else if(id == R.id.nav_match){
                 fragment = new MatchFragment();
             }
 
@@ -69,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         if (savedInstanceState == null) {
-            navigationView.setCheckedItem(R.id.nav_match);
+            navigationView.setCheckedItem(R.id.nav_team);
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.frame_layout, new MatchFragment())
                     .commit();
