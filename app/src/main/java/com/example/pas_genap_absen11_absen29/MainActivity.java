@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
         if (savedInstanceState == null) {
             navigationView.setCheckedItem(R.id.nav_team);
             getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.frame_layout, new MatchFragment())
+                    .replace(R.id.frame_layout, new TeamFragment())
                     .commit();
         }
     }
