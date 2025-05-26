@@ -58,6 +58,8 @@ public class MainActivity extends AppCompatActivity {
                 fragment = new TeamFragment();
             }else if(id == R.id.nav_match){
                 fragment = new MatchFragment();
+            }else if(id == R.id.nav_profile){
+                fragment = new ProfileFragment();
             }
 
             if (fragment != null) {
